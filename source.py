@@ -61,9 +61,3 @@ while(True):
         print('\n \n')
     elif a == '3':
         break
-
-
-'''
-lstDepts = open('depts.txt', 'w')
-lstDepts.write(firstPage)
-'''
