@@ -7,7 +7,7 @@ def get_page(url, parm=None):
     if resp.code == 200:
         return resp.read().decode('utf-8')
     else:
-        print("Site unavailable!!! /n")
+        print("Сайт недоступен /n")
 
 
 def parse_page(html):
@@ -37,9 +37,9 @@ staff = parse_page(html_staff)
 num_to_list = {'1': staff, '2': depts}
 
 while(True):
-    print('Enter \'1\' if you want to get a list of tutors\n\
-Enter \'2\' if you want to get a list of departments\n\
-Enter any character other than those written above for exit')
+    print('Введите \'1\' если вы хотите получить список преподавателей\n\
+Введите \'2\' если вы хотите получить список кафедр\n\
+Введите любой символ, кроме написанного выше, чтобы выйти')
     a = input()
     if re.fullmatch(r'\b[1-2]{1}\b', a) is not None:
         print_list(num_to_list[a])
